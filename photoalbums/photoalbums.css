@@ -1,0 +1,96 @@
+.dark_fon{
+    width: 100%;
+    position: absolute;
+    background-color: #090909cc;
+    z-index: 2;
+}
+
+.slider{
+    display: none;
+    position: absolute;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 8% 10%;
+    z-index: 3;
+}
+
+.image{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 96%;
+    height: auto;
+}
+
+
+
+.frame_slider{
+    position: relative;
+    margin-top: 1%;
+    width: 70%;
+    background: linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%), linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #484847, #090909);
+    background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.521);
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    
+}
+
+.btn_slider{
+    cursor: pointer;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    background-color: #09090996;
+    color: #fff;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    
+}
+.down{
+    left: 2.5%;
+    top: 50%
+}
+
+.next{
+    left: 97.5%;
+    top: 50%;
+    transform: translate(-100%, 0);
+}
+
+
+.exit{
+    left: 96.8%;
+    top: -3.5%;
+}
+
+
+.halls{
+    margin: 30px 15% 100px 15%;
+    text-align: center;
+}
+
+h2{
+    font-size: 36pt;
+    margin-bottom: 25px;
+}
+
+.photoalbums_title{
+    font-size: 46pt;
+    margin: 40px;
+    text-align: center;
+    color: rgb(253, 78, 78);
+}
+
+span{
+    color: rgb(253, 78, 78);
+}
+.images{
+    width: 30%;
+    height: auto;
+    cursor: pointer;
+}
+

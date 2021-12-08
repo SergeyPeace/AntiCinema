@@ -1,0 +1,94 @@
+.stocks_content{
+    text-align: center;
+}
+
+
+.title_1{
+    font-size: 36pt;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+}
+
+
+.image{
+    margin: auto 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    
+}
+
+.image:hover{
+    outline: 3px dashed rgb(27, 212, 245);
+    cursor: pointer;
+}
+
+.image:active{
+    outline: 3px dashed rgb(253, 78, 78);
+}
+
+
+.image_in{
+    outline: 3px dashed #fac021;
+}
+
+.list_item h4{
+    font-size: 26pt;
+}
+
+
+
+.stocks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.list_item{
+    margin: 50px 2%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: stocks_appearance;
+    animation-duration: 1.5s;
+}
+
+.title_hr{
+    width: 500px; 
+    margin: 0 auto;
+
+    border: 0;
+    height: 3px;
+    background: #000;
+    background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+    background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+    background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+    background-image: -o-linear-gradient(left, #fff, #000, #fff);
+
+    animation-name: stocks_appearance;
+    animation-duration: 1.5s;
+ 
+}
+
+.description{
+    text-align: justify;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.521);
+    background: #fff;
+    font-size: 20pt;
+    margin: 30px 30%;
+
+    animation-name: stocks_appearance;
+    animation-duration: 2s;
+}
+
+@keyframes stocks_appearance{
+    from{opacity: 0.4; transform: translate(0, 40px)}
+    to{opacity: 1; transform: translate(0, 0)}
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Азбука Кино</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Main.css">
+    <link rel="shortcut icon" href="resource/images/load.png" type="image/png">
+</head>
+<body>
+    <div class="container" id='form' style="display: none;"></div>
+    <header id="Header" v-cloak>
+        <div class="header_inner" v-html="HeaderInner"></div>
+    </header>
+    <div class="osnovnoy_content">
+        <section>
+            <h4>ЧАСТНЫЙ КИНОТЕАТР АЗБУКА КИНО</h4>
+            <h11>ОРГАНИЗУЕМ КРАСОЧНЫЕ МЕРОПРИЯТИЯ</h11>
+            <button class="information" onclick="window.location.href = 'tariff/tariff.html';">Узнать подробнее</button>
+        </section>
+
+        <div class="wave"></div>
+
+        <section>
+            <h4>ВЫБИРАЯ АЗБУКУ КИНО ВЫ ПОЛУЧАЕТЕ</h4>
+            <hr>
+            <p>Личный кинозал только для вашей компании</p>
+            <div class="about_us">
+                <div class="party promises">
+                    <img src="resource/images/party.png" alt="Вечеринка">
+                    <h3>Празднуй!</h3>
+                    <p>Собери толпу друзей и отпразднуй значимое событие! Мы будем рады помочь вам организовать выпускной, день рождения, Новый год или любой другой праздник! </p>
+                </div>
+                
+                <div class="game promises">
+                    <img src="resource/images/game.png" alt="Играй">
+                    <h3>Играй!</h3>
+                    <p>Вы можете поиграть в настольные игры из нашей колекции или принести свои, зарубиться в PS5 или  Xbox Series X, а самое главное — посмотреть фильм на большом экране!</p>
+                </div>
+                
+                <div class="enjoy promises">
+                    <img src="resource/images/enjoy.png" alt="Наслаждайся">
+                    <h3>Наслаждайся!</h3>
+                    <p>Попробуй итальянскую, японскую или национальную кухню от нашего ресторана, разместись на уютном диване и включи любимый фильм!</p>
+                </div>
+            </div>
+            <div>
+                <img class="ticket_img" src="resource/images/ticket.png" alt="Наслаждайся">
+                <p class="addition">Наше заведение находится в самом сердце Санкт-Петербурга и работает ежедневно, чтобы вы могли хорошо провести время компанией или парой. Для этого мы приготовили для вас 5 раскошных залов со своей индивидуальной тематикой. Романтические свидания под луной и звездами, детские праздники и дружеские посиделки, фотосессии и веселые дни рождения - всё это ждет вас в «Азбука Кино».</p>
+                <button class="btn_type_1 btn_hall" onclick="window.location.href = 'tariff/tariff.html';">Выбрать зал</button>
+            </div>
+           </section>
+           <div class="wave relief_2"></div>
+
+
+        <section class="choice_section">
+            <p class='space'>Почему стоит выбрать именно наше пространство?</p>
+            <ul class="choice">
+                <li class="list_item"><img src="resource/images/team.png" alt="Крутой персонал"><div><h6>Крутой персонал</h6><p>У нас работают лучшие сотрудники, которые всегда помогут решить любой вопрос</p></div></li>
+                <li class="list_item"><img src="resource/images/projector-screen.png" alt="Большие экраны"><div><h6>Большие экраны</h6><p>Каждый зал оборудован большим экраном и проектором</p></div></li>
+                <li class="list_item"><img src="resource/images/column.png" alt="Чистый звук"><div><h6>Чистый звук</h6><p>Для каждой комнаты мы собрали наилушчую аудиосистему</p></div></li>
+                <li class="list_item"><img src="resource/images/karaoke.png" alt="Караоке"><div><h6>Караоке</h6><p>Вы можете устроить дружескую битву голосов, ведь у нас большая библиотека песен</p></div></li>
+                <li class="list_item"><img src="resource/images/videogame.png" alt="Игры"><div><h6>Приставки и игры</h6><p>PS5, Х-Box и большой выбор настольных игр в вашем распоряжении</p></div></li>
+            </ul>
+        </section>
+
+    </div>
+
+   
+    <footer id="Footer" v-cloak>
+        <div class="footer_inner" v-html="FooterInner"></div>
+    </footer>
+
+
+
+<script>
+
+/*Блок методов для отслеживания прокрутки страницы для внедрения анимации элементов*/
+/*Определяем вверхнюю границу блока*/
+function getCoords(elem) {
+
+    let box = elem.getBoundingClientRect();
+
+    return {
+        top: box.top
+    };
+}
+
+let count =  0
+let element
+/*Подключаем слушателя прокрутки страницы*/
+window.addEventListener("scroll", throttleScroll, false);
+
+/*Функция по активации анимации*/
+function throttleScroll(e) {
+
+    if (  getCoords(document.querySelector('.about_us')).top < 750 ){
+        document.querySelector('.about_us').style='animation-name: about_us_anim; animation-duration: 1.5s; opacity: 1;'
+    }
+
+    if (  getCoords(document.querySelector('.ticket_img')).top < 550 ){
+        document.querySelector('.ticket_img').style='animation-name: ticket_img_anim; animation-duration: 1.5s; opacity: 1;'
+    }
+
+    if (  getCoords(document.querySelector('.addition')).top < 900 ){
+        document.querySelector('.addition').style='animation-name: about_us_anim; animation-duration: 1.5s; opacity: 1;'
+    }
+
+    if (  getCoords(document.querySelector('.space')).top < 700 ){
+        document.querySelector('.space').style='animation-name: space_anim; animation-duration: 1.5s; opacity: 1;'
+    }
+
+
+/*Функия добавляет новый класс с инструкцией анимации к нужному элементу по его классу*/
+/*Поскольку в данном случае идёт работа со списком, то нужно поочередно выбирать один из его элементов,
+когда пользователь опускается до нужной высоты страницы*/
+
+    if (  getCoords(document.querySelectorAll('.list_item')[count]).top < 800 ){
+        if (count < (document.getElementsByClassName('list_item').length)){
+            
+            element = document.querySelectorAll('.list_item')[count]
+            count = count + 1
+            element.classList.add('list_item_2')  
+        }
+    }  
+}
+</script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="form/form.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

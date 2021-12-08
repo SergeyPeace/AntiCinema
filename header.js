@@ -1,0 +1,74 @@
+const Header={
+    data(){
+        return{
+           HeaderInner:
+           `<img class="logo_website" src="resource/images/load.png" alt="Иконка сайта" width="30px" height="30px" style="float: left; margin-right: 15px;">
+           <nav>
+               <ul>
+                   <li><a href='../index.html'>Главная</a></li>
+                   <li><a href='tariff/tariff.html'>Тарифы</a></li>
+                   <li><a href='stocks/stocks.html'>Акции</a></li>
+                   <li><a href='reviews/reviews.html'>Отзывы</a></li>
+                   <li><a href='photoalbums/photoalbums.html'>Фотогалерея</a></li>
+                   <li><a href='contacts/contacts.html'>Контакты</a></li>
+               </ul>
+           </nav> 
+           <button class="calling_form">Заказать звонок</button>`,
+        }
+    }
+}
+
+
+
+Vue.createApp(Header).mount('#Header')
+
+function logotip(){
+if(window.location.pathname !== '/index.html'){
+    document.querySelector('.logo_website').src='../resource/images/load.png'
+} 
+
+else{
+    document.querySelector('.logo_website').src='resource/images/load.png'
+}}
+
+logotip()
+
+
+let calling_form = document.querySelector('.calling_form')
+let container = document.querySelector('.container')
+let btn_exit = document.querySelector('.btn_exit')
+let primary = document.querySelector('.primary')
+let btn_2 = document.querySelectorAll('.btn_2')
+
+calling_form.addEventListener('click', function(){
+    /*Отключение прокрутки страницы*/
+    document.body.style.overflow = "hidden"
+    container.style.display = "block"
+    container.style.top = window.scrollY + "px"
+})
+
+
+btn_exit.addEventListener('click', function(){
+    container.style.display = "none"
+    document.body.removeAttribute('style')
+})
+
+primary.addEventListener('click', function(){
+    container.style.display = "none"
+    document.body.removeAttribute('style')
+    alert('Форма успешно отправлена!')
+})
+
+
+
+
+for (let i = 0; i < btn_2.length; i++) {
+    btn_2[i].onclick = function() {
+
+        /*Отключение прокрутки страницы*/
+        document.body.style.overflow = "hidden"
+        container.style.display = "block"
+        container.style.top = window.scrollY + "px"
+       
+    }
+}

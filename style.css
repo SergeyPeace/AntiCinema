@@ -1,0 +1,341 @@
+[v-cloak]{
+    display: none;  /*Не выводит на экран элементы, которые еще не прогрузились*/
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+
+
+
+
+/*Шапка сайта*/
+
+header{
+    z-index: 100;
+    position: sticky; /*Липкое позиционирование*/
+    top: 0;         /*Прикрепление к верхней части экрана*/
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161618;
+	/*border-radius: 5px;*/
+	border: 10px solid #161618;
+	box-shadow: 0px 0px 40px 10px #161618;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+
+nav{
+    float: left;
+}
+nav a{
+    text-decoration: none; /*Убрать подчеркивание ссылок*/
+    color: #fff;
+}
+
+nav a:hover{
+    text-decoration: underline dotted; /*Подчеркивание ссылок в нафигации*/
+    color: #ffe4b5; /*Мокасиновый цвет*/
+}
+
+header li{
+    list-style-type: none;
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+   
+    padding: 3px;
+    color: #fff;
+    font-size: 20pt;
+}
+
+header button{
+    margin: -10px 0 0 20px;
+    font-size: 1em;         /*Размер текста кнопки*/
+    background-color: transparent; /* Цвет фона - прозрачный*/
+    border: 3px solid #d6900d; /* Параметры рамки */
+    padding: 10px;  
+    border-radius: 30px;
+    float: left; 
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;  /*Плавность анимации*/
+    
+}
+
+header button:hover{
+    background-color: #d6900d;
+    color: black;
+}
+
+
+
+/*Свойства шапки при уменьшении экрана*/
+@media (max-width: 980px) {
+    header button{
+        display: none;
+    }
+    header li{
+        font-size: 15pt;
+    }
+}
+
+
+
+
+/*Footer*/
+
+.blockbuster {
+    background-color: #efefef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='100' preserveAspectRatio='none' viewBox='0 0 1440 100'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1122%26quot%3b)' fill='none'%3e%3crect width='1440' height='100' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c32 C 57.6%2c28.8 172.8%2c18.8 288%2c16 C 403.2%2c13.2 460.8%2c20.8 576%2c18 C 691.2%2c15.2 748.8%2c-0.2 864%2c2 C 979.2%2c4.2 1036.8%2c27.8 1152%2c29 C 1267.2%2c30.2 1382.4%2c12.2 1440%2c8L1440 100L0 100z' fill='rgba(249%2c 249%2c 249%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c40 C 96%2c45.4 288%2c68.4 480%2c67 C 672%2c65.6 768%2c34 960%2c33 C 1152%2c32 1344%2c56.2 1440%2c62L1440 100L0 100z' fill='rgba(244%2c 244%2c 244%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c71 C 96%2c75.2 288%2c90.8 480%2c92 C 672%2c93.2 768%2c75.6 960%2c77 C 1152%2c78.4 1344%2c94.6 1440%2c99L1440 100L0 100z' fill='rgba(239%2c 239%2c 239%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1122'%3e%3crect width='1440' height='100' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: top center;
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    padding: 10em 0 0 0;
+}
+
+.questions{
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 100%;
+    user-select: none; /*Запрет на выделение текста*/
+    font: 18px/1.55 "Futura PT",Calibri,sans-serif;
+    color: #413f4f;
+    
+}
+
+.questions details{
+    padding: 0.5em 0;
+    font-size: 1em;
+}
+
+.questions summary{
+    list-style-type: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+.best-articles {
+    background-color: #cad4d6;
+    position: relative;
+    padding: 130px 30px;
+}
+
+
+
+.best-articles::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='150' preserveAspectRatio='none' viewBox='0 0 1440 150'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1058%26quot%3b)' fill='none'%3e%3crect width='1440' height='150' x='0' y='0' fill='rgba(239%2c 239%2c 239%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c2 C 96%2c9.6 288%2c35.6 480%2c40 C 672%2c44.4 768%2c24 960%2c24 C 1152%2c24 1344%2c36.8 1440%2c40L1440 150L0 150z' fill='rgba(229%2c 232%2c 233%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c98 C 96%2c92.8 288%2c74.4 480%2c72 C 672%2c69.6 768%2c85.8 960%2c86 C 1152%2c86.2 1344%2c75.6 1440%2c73L1440 150L0 150z' fill='rgba(213%2c 221%2c 222%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c111 C 96%2c117.8 288%2c146.4 480%2c145 C 672%2c143.6 768%2c105.6 960%2c104 C 1152%2c102.4 1344%2c130.4 1440%2c137L1440 150L0 150z' fill='rgba(202%2c 212%2c 214%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1058'%3e%3crect width='1440' height='150' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.best-articles::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='150' preserveAspectRatio='none' viewBox='0 0 1440 150'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1228%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c18 C 96%2c24.2 288%2c48.6 480%2c49 C 672%2c49.4 768%2c24.4 960%2c20 C 1152%2c15.6 1344%2c25.6 1440%2c27L1440 150L0 150z' fill='rgba(37%2c 36%2c 44%2c 0.5)'%3e%3c/path%3e%3cpath d='M 0%2c80 C 96%2c76.2 288%2c58.8 480%2c61 C 672%2c63.2 768%2c92 960%2c91 C 1152%2c90 1344%2c63 1440%2c56L1440 150L0 150z' fill='rgba(37%2c 36%2c 44%2c 0.52)'%3e%3c/path%3e%3cpath d='M 0%2c104 C 96%2c113.2 288%2c149.6 480%2c150 C 672%2c150.4 768%2c110.4 960%2c106 C 1152%2c101.6 1344%2c123.6 1440%2c128L1440 150L0 150z' fill='rgba(37%2c 36%2c 44%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1228'%3e%3crect width='1440' height='150' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.We {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    padding: 60px 0 40px 0;
+    box-sizing: border-box;
+    background-color: #25242c;
+
+    font: 18px/1.55 "Futura PT",Calibri,sans-serif;
+    color: #fff;
+}
+
+
+
+
+/*Дополнительные элементы*/
+
+.btn_type_1 {
+    background-color: #f89729;
+    place-content: center;
+    place-items: center;
+    width: fit-content;
+    border-radius: 99px;
+    letter-spacing: 0.05em;
+    border: 1px solid #f89729;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+    font-weight: 700;
+    outline: none;
+    color: #fff;
+    transition: all 0.22s;
+  }
+  
+  .btn_type_1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .btn_type_1:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+  /*Для формы*/
+
+.container {
+    top: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    z-index: 10000;
+}
+
+
+.card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 3px solid #d6900d;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+    background: #ffe8cb;
+}
+
+
+
+.container h2 {
+    margin-bottom: 1rem;
+    font-size: 26pt;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #f8972988;
+}
+
+.btn_exit{
+    cursor: pointer;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    background-color: #09090996;
+    color: #fff;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+
+    left: 96.8%;
+    top: -10%;
+    
+}
+
+.btn {
+    color: #42b983;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    width: fit-content;
+    border-radius: 99px;
+    letter-spacing: 0.05em;
+    border: 1px solid #42b983;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+    font-weight: 700;
+    outline: none;
+    background: #fff;
+    transition: all 0.22s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 1!important;
+    background: #eee!important;
+    border-color: #ddd!important;
+    color: #999!important;
+}
+
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.btn.primary {
+    background: #f89729;
+    color: #fff;
+    border-color: #f89729;
+}
+
+
+.form-control {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.form-control label {
+    display: block;
+    margin: 0 0 0.3rem 0.3rem;
+    font-size: 20pt;
+    
+}
+
+.form-control input{
+    margin: 0 0 1rem 0;
+    outline: none;
+    border: 2px solid #ccc;
+    display: block;
+    width: 80%;
+    color: #2c3e50;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+
+
+
+.form-control input:active,
+.form-control input:focus {
+    transition: border 0.22s;
+    border: 2px solid #42b983;
+}
+

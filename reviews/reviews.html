@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы Азбуки Кино</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="shortcut icon" href="../resource/images/load.png" type="image/png">
+</head>
+<body>
+    <div class="container" id='form' style="display: none;"></div>
+    <header id="Header" v-cloak>
+        <div class="header_inner" v-html="HeaderInner" ></div>
+    </header>
+
+    <div class="content_reviews" id="Reviews" v-cloak>
+        <h1 class="Our_reviews">Наши отзывы</h1>
+        <hr class="reviews_hr">
+        <ul class="reviews">
+            <li class="list_item" v-for="count in listItem">  <!-- Цикл из списка -->
+                <div class="comment">
+                    <img alt="Иконка комментатора"  v-bind:src="photoList[count]"> <!-- задаем значение атрибуту из массива по индексу = count -->
+                    <h2 class="comment_chapter">{{ commentChapter[count] }}</h2> <!-- задаем имя коментатора из массива -->
+                </div>
+                <p class="comment_content">{{ commentContent[count] }}</p>  <!-- задаем комментарий из массива -->
+            </li>
+        </ul>
+    </div>
+
+    <footer id="Footer" v-cloak>
+        <div class="footer_inner" v-html="FooterInner" ></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../form/form.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

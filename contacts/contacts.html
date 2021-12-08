@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты Азбуки Кино</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="shortcut icon" href="../resource/images/load.png" type="image/png">
+</head>
+<body>
+    <div class="container" id='form' style="display: none;"></div>
+    <header id="Header" v-cloak>
+        <div class="header_inner" v-html="HeaderInner" ></div>
+    </header>
+    
+
+    <div class="contacts_content">
+        <div class="contacts_line"></div>
+
+        <div class="contacts">
+            <h2>Наши <span>к</span>онтакты</h2>
+            <div class="contacts_in">
+                <div class="contacts_column">
+                    <p>г. Санкт-Петербург, переулок Джамбула, 13</p>
+                    <span>тел.</span>
+                    <a href="tel:+7812315XXXX"> +7(812)315-XX-XX</a>
+                </div>
+                <div class="contacts_column">
+                    <p>Время работы</p>
+                    <ul>
+                        <li>пн-чт с 12:00 до 23:00</li>
+                        <li>пт-<span>вс</span> с 10:00 до 01:00</li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3316bca6f3bbdb1484de02b0137f9a92d1fad338ff7e28f5e81038b3f89c2f1b&amp;width=900&amp;height=350&amp;lang=ru_RU&amp;scroll=false"></script>
+
+        </div>
+
+
+    </div>
+
+    <footer id="Footer" v-cloak>
+        <div class="footer_inner" v-html="FooterInner" ></div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../form/form.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Акции Азбуки Кино</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="stocks.css">
+    <link rel="shortcut icon" href="../resource/images/load.png" type="image/png">
+</head>
+<body>
+    <div class="container" id='form' style="display: none;"></div>
+    <header id="Header" v-cloak>
+        <div class="header_inner" v-html="HeaderInner" ></div>
+    </header>
+
+    <div class="stocks_content">
+        <h1 class="title_1">НАШИ <span style="color: rgb(253, 78, 78)">А</span>КЦИИ</h1> 
+        <ul class="stocks">
+            <li class="list_item"><img class="image image_in" src="../resource/images/stocks/popcorn.png" alt="Попкорн" draggable="false"><h4>Попкорн за фото</h4></li>
+            <li class="list_item"><img class="image" src="../resource/images/stocks/wine.png" alt="Вино" draggable="false"><h4>Вино и сыр</h4></li>
+            <li class="list_item"><img class="image" src="../resource/images/stocks/student.png" alt="Студент" draggable="false"><h4>День студента</h4></li>
+            <li class="list_item"><img class="image" src="../resource/images/stocks/ivi.png" alt="ivi.ru" draggable="false"><h4>Дома как в кино</h4></li>
+        </ul>
+        <hr class="title_hr">
+        <div class="description">sfdfsfs</div>
+    </div>
+
+
+    <footer id="Footer" v-cloak>
+        <div class="footer_inner" v-html="FooterInner" ></div>
+    </footer>
+
+    <script src="stocks.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../form/form.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+</body>
+</html>

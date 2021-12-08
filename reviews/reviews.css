@@ -1,0 +1,84 @@
+
+.Our_reviews{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 36pt;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+
+.reviews_hr{
+    border: 0;
+    height: 2px;
+    width: 300px;
+    margin: 0 auto 30px auto;
+    background: #000;
+    background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+    background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+    background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+    background-image: -o-linear-gradient(left, #fff, #000, #fff);
+}
+
+
+.reviews{
+    margin-bottom: 30px;
+}
+.list_item{
+    opacity: 0;
+    margin: 50px auto;
+    max-width: 900px;
+    height: 100%;
+    box-shadow:0 0 10px rgb(253, 78, 78);
+    list-style-type: none;
+
+    font-size: 20pt;
+}
+
+/*Для первого элемента анимация включается при открытии страницы*/
+.list_item:first-of-type{
+    animation-name: list_item;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+/*Вызов анимации*/
+.list_item_2{
+    animation-name: list_item;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+/*Анимация плавного появления*/
+@keyframes list_item{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+.list_item img{
+    margin: auto 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.comment_chapter:first-letter{
+    color: rgb(253, 78, 78);
+}
+
+.comment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20pt 10pt 0 10pt;
+}
+
+
+.comment_content{
+    padding: 5pt 10pt 20pt 20pt;
+}
+
+

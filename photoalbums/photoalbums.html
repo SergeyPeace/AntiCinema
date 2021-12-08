@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фотоальбом Азбуки Кино</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="photoalbums.css">
+    <link rel="shortcut icon" href="../resource/images/load.png" type="image/png">
+</head>
+<body>
+    <div class="container" id='form' style="display: none;"></div>
+    <header id="Header" v-cloak>
+        <div class="header_inner" v-html="HeaderInner" ></div>
+    </header>
+    <div class="dark_fon"></div>
+    <div class="slider">
+        <div class="frame_slider"><button class="down btn_slider"><p>←</p></button><button class="next btn_slider"><p>→</p></button><button class="exit btn_slider"><p>✖</p></button><img class="image" src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_1.jpg"></div>
+    </div>
+    <div class="photoalbums_content">
+        <h1 class="photoalbums_title">Фотоальбом</h1>
+        <!--Зал 1 Звезда смерти-->
+        <div class="halls">
+            <h2>Зал «<span>З</span>везда смерти»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_StarWars/hall_StarWars_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+        <!--Зал 2 Party Hard-->
+        <div class="halls">
+            <h2>Зал «<span>P</span>arty Hard»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_PartyHard/hall_PartyHard_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+
+        <!--Зал 3 Межпространсвенная лаборатория-->
+        <div class="halls">
+            <h2>Зал «<span>М</span>ежпространсвенная лаборатория»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_laboratory/hall_laboratory_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+
+        <!--Зал 4 Башня Старка-->
+        <div class="halls">
+            <h2>Зал «<span>Б</span>ашня Старка»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_tower/hall_tower_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+
+        <!--Зал 5 Сказочный лес-->
+        <div class="halls">
+            <h2>Зал «<span>С</span>казочный лес»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_forest/hall_forest_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+
+
+        <!--Зал 6 Бухта Майями-->
+        <div class="halls">
+            <h2>Зал «<span>Б</span>ухта Майями»</h2>
+            <div class="line_1">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_1.jpg" alt="photo_1" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_2.jpg" alt="photo_2" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_3.jpg" alt="photo_3" draggable="false">
+            </div>
+            <div class="line_2">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_4.jpg" alt="photo_4" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_5.jpg" alt="photo_5" draggable="false">
+                <img class='images' src="../resource/images/photo_halls/hall_Miami/hall_Miami_6.jpg" alt="photo_6" draggable="false">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <footer id="Footer" v-cloak>
+        <div class="footer_inner" v-html="FooterInner" ></div>
+    </footer>
+
+
+    <script src="photoalbums.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../form/form.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+</body>
+</html>
