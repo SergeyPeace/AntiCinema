@@ -23,7 +23,7 @@ const Header={
 Vue.createApp(Header).mount('#Header')
 
 function logotip(){
-if(window.location !== 'https://sergeypeace.github.io/AntiCinema/index.html'){
+if(window.location != 'https://sergeypeace.github.io/AntiCinema/index.html'){
     document.querySelector('.logo_website').src='../resource/images/load.png'
 } 
 
