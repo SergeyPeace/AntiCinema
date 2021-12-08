@@ -5,12 +5,12 @@ const Header={
            `<img class="logo_website" src="resource/images/load.png" alt="Иконка сайта" width="30px" height="30px" style="float: left; margin-right: 15px;">
            <nav>
                <ul>
-                   <li><a href='../index.html'>Главная</a></li>
-                   <li><a href='tariff/tariff.html'>Тарифы</a></li>
-                   <li><a href='stocks/stocks.html'>Акции</a></li>
-                   <li><a href='reviews/reviews.html'>Отзывы</a></li>
-                   <li><a href='photoalbums/photoalbums.html'>Фотогалерея</a></li>
-                   <li><a href='contacts/contacts.html'>Контакты</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/index.html'>Главная</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/tariff/tariff.html'>Тарифы</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/stocks/stocks.html'>Акции</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/reviews/reviews.html'>Отзывы</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/photoalbums/photoalbums.html'>Фотогалерея</a></li>
+                   <li><a href='https://sergeypeace.github.io/AntiCinema/contacts/contacts.html'>Контакты</a></li>
                </ul>
            </nav> 
            <button class="calling_form">Заказать звонок</button>`,
@@ -23,7 +23,7 @@ const Header={
 Vue.createApp(Header).mount('#Header')
 
 function logotip(){
-if(window.location.pathname !== '/index.html'){
+if(window.location !== 'https://sergeypeace.github.io/AntiCinema/index.html'){
     document.querySelector('.logo_website').src='../resource/images/load.png'
 } 
 
