@@ -16,7 +16,7 @@ const form = Vue.createApp({
                 <input type="text" id="name" v-model.trim="name">
 
                 <label for="tel">Введите номер телефона</label>
-                <input type="text" id="tel" onkeyup="this.value = this.value.replace(^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$ );" v-model.trim="tel">
+                <input type="text" id="tel" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"  v-model.trim="tel">
                 </div>
 
                 <button class="btn primary" :disabled="name.length === 0 || tel.length === 0">Оставить заявку</button>
