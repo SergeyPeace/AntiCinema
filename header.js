@@ -2,7 +2,7 @@ const Header={
     data(){
         return{
            HeaderInner:
-           `<img class="logo_website" src="resource/images/load.png" alt="Иконка сайта" width="30px" height="30px" style="float: left; margin-right: 15px;">
+           `<img class="logo_website" src="resource/images/load.png" alt="Иконка сайта" width="30px" height="30px" style="float: left; margin-right: 15px; cursor: pointer;" onclick="function(){window.open('https://sergeypeace.github.io/AntiCinema/index.html')}">
            <nav>
                <ul>
                    <li><a href='https://sergeypeace.github.io/AntiCinema/index.html'>Главная</a></li>
