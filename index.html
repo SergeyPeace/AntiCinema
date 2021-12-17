@@ -116,7 +116,7 @@ function throttleScroll(e) {
 когда пользователь опускается до нужной высоты страницы*/
 
     if (  getCoords(document.querySelectorAll('.list_item')[count]).top < 800 ){
-        if (count < (document.getElementsByClassName('list_item').length-1)){
+        if (count <= (document.getElementsByClassName('list_item').length-1)){
             
             element = document.querySelectorAll('.list_item')[count]
             count = count + 1
