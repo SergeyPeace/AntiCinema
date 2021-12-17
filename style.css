@@ -44,7 +44,6 @@ nav a{
 }
 
 nav a:hover{
-    text-decoration: underline dotted; /*Подчеркивание ссылок в нафигации*/
     color: #ffe4b5; /*Мокасиновый цвет*/
 }
 
