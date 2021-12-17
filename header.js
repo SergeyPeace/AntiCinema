@@ -34,6 +34,13 @@ else{
 
 logotip()
 
+/*Подчеркивание названия страницы, на которой в данный момент находится клиент
+Сравниваем ссылку внутри тега с ссылкой окна и в случае, если ссылки индентичны, то присваиваем атрибут «style»*/
+for (let i = 0; i !== document.getElementsByTagName('a').length; i++){
+    if (document.getElementsByTagName('a')[i].href===String(window.location)){
+        document.getElementsByTagName('a')[i].style.textDecoration ="underline dotted"
+    }
+}
 
 let calling_form = document.querySelector('.calling_form')
 let container = document.querySelector('.container')
