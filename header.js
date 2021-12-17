@@ -38,7 +38,7 @@ logotip()
 Сравниваем ссылку внутри тега с ссылкой окна и в случае, если ссылки индентичны, то присваиваем атрибут «style»*/
 for (let i = 0; i !== document.getElementsByTagName('a').length; i++){
     if (document.getElementsByTagName('a')[i].href===String(window.location)){
-        document.getElementsByTagName('a')[i].style.textDecoration ="underline dotted"
+        document.getElementsByTagName('a')[i].style.color ="#ffe4b5"
     }
 }
 
