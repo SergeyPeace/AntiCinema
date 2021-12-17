@@ -22,6 +22,7 @@ const Header={
 
 Vue.createApp(Header).mount('#Header')
 
+/*Добавление логотипа с ссылкой на главную страницу*/
 function logotip(){
 if(String(window.location) !== 'https://sergeypeace.github.io/AntiCinema/index.html'){
     document.querySelector('.logo_website').src='../resource/images/load.png'

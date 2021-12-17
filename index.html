@@ -83,7 +83,7 @@ function getCoords(elem) {
 
     return {
         top: box.top
-    };
+    }
 }
 
 let count =  0
@@ -116,12 +116,14 @@ function throttleScroll(e) {
 когда пользователь опускается до нужной высоты страницы*/
 
     if (  getCoords(document.querySelectorAll('.list_item')[count]).top < 800 ){
-        if (count <= (document.getElementsByClassName('list_item').length-1)){
+        
             
-            element = document.querySelectorAll('.list_item')[count]
+        element = document.querySelectorAll('.list_item')[count]
+        if (count !== (document.getElementsByClassName('list_item').length-1)){
             count = count + 1
-            element.classList.add('list_item_2')  
         }
+        element.classList.add('list_item_2')  
+        
     }  
 }
 </script>
