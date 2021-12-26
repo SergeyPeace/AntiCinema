@@ -13,10 +13,10 @@ const form = Vue.createApp({
 
                 <div class="form-control">
                 <label for="name">Введите имя</label>
-                <input type="text" id="name" v-model.trim="name">
+                <input type="text" id="name" onkeyup="this.value = this.value.replace(/[^А-я]/g,'');" v-model.trim="name">
 
                 <label for="tel">Введите номер телефона</label>
-                <input type="text" id="tel" v-model.trim="tel">
+                <input type="tel" id="tel" onkeyup="this.value = this.value.replace(/[^\\+\\(\\)\\-0-9]/g,'');" placeholder="+7(___)___-__-__" v-model.trim="tel">
                 </div>
 
                 <button class="btn primary" :disabled="name.length === 0 || tel.length === 0">Оставить заявку</button>
@@ -60,3 +60,32 @@ const form = Vue.createApp({
 })
 form.mount('#form')
 
+let telefon = document.getElementById('tel')
+let number
+let numberProverka = "+7(___)___-__-__"
+telefon.addEventListener('keyup', function(event){
+    number = String(telefon.value)
+        if(event.code !== 'Backspace' && event.code !== 'Delete'){
+        if ((number[0] === '8' || number[0] === '+' || number[0] === '7') && number[3] === undefined){
+        number =  '+7('
+        }
+        if (number[5] !== undefined && number[7] === undefined){
+            number += ")"
+        }
+        if (number[9] !== undefined && number[11] === undefined){
+            number += "-"
+        }
+        if (number[12] !== undefined && number[14] === undefined){
+            number += "-"
+        }
+
+        if (number.length === 16){
+            numberProverka = number
+        }
+
+        else if (number.length > 16){
+            number = numberProverka
+        }
+    }
+    telefon.value = number
+})
