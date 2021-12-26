@@ -30,7 +30,7 @@ const form = Vue.createApp({
             //https://anti-cinema-default-rtdb.firebaseio.com/people.json
 
             //Создаем запрос с типом POST с помощью метода fetch
-            const response = await fetch('https://anti-cinema-default-rtdb.firebaseio.com/people.json', {
+            fetch('https://anti-cinema-default-rtdb.firebaseio.com/people.json', {
                 method: 'POST',
                 //Указываем тип данных с которым мы работаем
                 headers: {
@@ -48,8 +48,7 @@ const form = Vue.createApp({
                 })
             })
 
-            //Получить ответ сервера после отправки данных
-            //const firebaseData = await response.json()
+            
 
             //очищаем поля ввода
             this.name = ''
