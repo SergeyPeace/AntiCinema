@@ -26,7 +26,7 @@ const form = Vue.createApp({
         </div>
         `,
     methods: {
-        async createPerson(){
+        createPerson(){
             //https://anti-cinema-default-rtdb.firebaseio.com/people.json
 
             //Создаем запрос с типом POST с помощью метода fetch
